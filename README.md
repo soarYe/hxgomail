@@ -29,7 +29,6 @@ Gomail supports:
 
 ## Documentation
 
-https://godoc.org/gopkg.in/gomail.v2
 
 
 ## Download
