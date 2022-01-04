@@ -34,7 +34,7 @@ https://godoc.org/gopkg.in/gomail.v2
 
 ## Download
 
-    go get gopkg.in/gomail.v2
+    go get https://github.com/soarYe/hxgomail
 
 
 ## Examples
@@ -66,7 +66,32 @@ bypass the verification of the server's certificate chain and host name by using
         // Send emails using d.
     }
 
+
+		
+
 Note, however, that this is insecure and should not be used in production.
+
+Use proxy method:
+
+    package main
+
+    import (
+    	"crypto/tls"
+
+    	"gopkg.in/gomail.v2"
+    )
+
+    func main() {
+        d = gomail.NewDialerWithProxy("smtp.example.com", 587, "user", "123456", gomail.ProxyConf{
+        Address:  "proxy address",
+        User:     "proxy user",
+        Password: "proxy password",
+        })
+    	d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
+
+        // Send emails using d.
+    }
+
 
 
 ## Contribute
