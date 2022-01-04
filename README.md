@@ -82,12 +82,12 @@ Use proxy method:
     )
 
     func main() {
-        d = gomail.NewDialerWithProxy("smtp.example.com", 587, "user", "123456", gomail.ProxyConf{
-        Address:  "proxy address",
-        User:     "proxy user",
-        Password: "proxy password",
-        })
-    	d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
+            d = gomail.NewDialerWithProxy("smtp.example.com", 587, "user", "123456", gomail.ProxyConf{
+            Address:  "proxy address",
+            User:     "proxy user",
+            Password: "proxy password",
+            })
+            d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
 
         // Send emails using d.
     }
