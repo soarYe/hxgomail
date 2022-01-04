@@ -55,7 +55,7 @@ bypass the verification of the server's certificate chain and host name by using
     import (
     	"crypto/tls"
 
-    	"gopkg.in/gomail.v2"
+    	"github.com/soarYe/hxgomail"
     )
 
     func main() {
