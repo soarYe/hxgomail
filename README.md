@@ -77,7 +77,7 @@ Use proxy method:
     import (
     	"crypto/tls"
 
-    	"gopkg.in/gomail.v2"
+    	gomail "github.com/soarYe/hxgomail"
     )
 
     func main() {
